@@ -2,8 +2,9 @@
 
 dosya_adlari <- list.files(path = "Dosyaların_Bulunduğu_Yol",full.names=TRUE)
 
+
 Hepsi <- lapply(dosya_adlari,function(i){
-  read.csv(i, header=FALSE,fill = T)
+  read.csv(i, header=FALSE, fill = TRUE)
 })
 
 data_frame <- do.call(rbind.data.frame, Hepsi)
